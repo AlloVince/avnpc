@@ -69,7 +69,7 @@ install-dev:
 	bower install  --allow-root
 
 install:
-	composer install --optimize-autoloader --prefer-dist
+	composer install --prefer-dist
 	git submodule update --init --recursive
 	sudo chown -R www-data.www-data ./config
 	sudo chown -R www-data.www-data ./logs
