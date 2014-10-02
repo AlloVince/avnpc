@@ -1,0 +1,26 @@
+{
+    "name": "allovince/avnpc",
+    "description": "",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "AlloVince",
+            "email": "allo.vince@gmail.com",
+            "homepage": "http://avnpc.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.10",
+	"allovince/evablog": "dev-master",
+        "allovince/evauser": "dev-master",
+	"allovince/evapermission": "dev-master",
+	"allovince/evafilesystem": "dev-master"
+    },
+    "suggest": {
+        "ext-gearman": "*"
+    },
+    "require-dev": {
+        "symfony/finder": "*"
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]>      <html lang="zh-CN" class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="zh-CN" class="no-js lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>         <html lang="zh-CN" class="no-js lt-ie10 ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="zh-CN" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title><?=$this->placeholder->block('title', 'Story of AlloVince');?></title>
+
+    <link rel="alternate" type="application/rss+xml" title="<?=$this->di->getConfig()->siteName?> RSS" href="<?=$this->di->getConfig()->baseUri?>/rss.xml" />
+
+    <?
+    $this->assets
+    ->collection('headerCss')
+    ->addCss('/wscn/css/bootstrap.css')
+    ->addCss('/vendor/fontawesome/css/font-awesome.css')
+    ->addCss('/wscn/css/style.css');
+    $this->assets->outputCss('headerCss');
+    ?>
+
+    <!--[if lt IE 9]>
+    <script src="<?=$this->url->getStatic('/vendor/html5shiv/dist/html5shiv.min.js')?>"></script>
+    <script src="<?=$this->url->getStatic('/vendor/respond/dest/respond.min.js')?>"></script>
+    <![endif]-->
+</head>
+<body>
+    <div id="page">
+        <!-- #header start-->
+        <header id="header" class="header">
+        <h1><a href="<?=$this->url->get('/');?>">Just Fine</a></h1>
+        <p>— Story of <a href="https://plus.google.com/104171418568283484752?rel=author">AlloVince</a></p>
+        <nav id="menu">
+        <ul class="submenu">
+            <li><a href="<?=$this->url->get('/');?>">Thinking</a></li>
+            <li><a href="<?=$this->url->get('/life');?>">Life</a></li>
+            <li><a href="<?=$this->url->get('/pages/projects');?>">Projects</a></li>
+            <li><a href="<?=$this->url->get('/pages/about'); ?>">About</a></li>
+            <li><a href="<?=$this->url->get('/feed/'); ?>"><i class="icon-rss"></i></a></li>
+        </ul>
+        </nav>
+        <!-- #header end -->
+        </header>
+    <?=$this->getContent()?>
+    <footer id="footer">
+<form class="form form-search margin10h" method="get" action="/search/">
+        <div class="row-fluid">
+            <div class="input-append ">
+                <input type="text" value="" placeholder="" class="search-query span2 validate[required]" id="avnpc-form-searchform-q" name="q">        
+                <button class="btn"><i class="icon-search"></i> </button>
+            </div>
+        </div>
+    </form>
+    </footer>
+</div>
+</body>
+</html>
