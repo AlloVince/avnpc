@@ -14,7 +14,7 @@ return array(
         'id' => 1,
         '_dispatch_cache' => 'lifetime=900&methods=get'
     ),
-    '/pages/(\w+)' => array(
+    '/pages/([\w-_]+)' => array(
         'module' => 'Avnpc',
         'controller' => 'pages',
         'slug' => 1,
