@@ -6,7 +6,7 @@
     "requirejs": "latest",
     "require-css": "latest",
     "requirejs-text": "latest",
-    "fontawesome": "4.2.0",
+    "fontawesome": "4.3.0",
     "fontawesome3": "https://github.com/FortAwesome/Font-Awesome.git#b1a8ad47303509e70e56079396fad2afadfd96d5",
     "underscore": "1.5.1",
     "jquery": "latest",
