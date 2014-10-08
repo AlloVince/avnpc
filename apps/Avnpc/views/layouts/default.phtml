@@ -20,7 +20,10 @@
     ->addCss('/avnpc/css/style.css');
     $this->assets->outputCss('headerCss');
     ?>
+    <!--
 <link href='http://fonts.useso.com/css?family=Sarina|Great+Vibes' rel='stylesheet' type='text/css'>
+-->
+<link href='http://fonts.googleapis.com/css?family=Sarina|Great+Vibes' rel='stylesheet' type='text/css'>
 
     <!--[if lt IE 9]>
     <script src="<?=$this->url->getStatic('/vendor/html5shiv/dist/html5shiv.min.js')?>"></script>
@@ -46,7 +49,7 @@
         </header>
     <?=$this->getContent()?>
     <footer id="footer">
-<form class="form form-search margin10h" method="get" action="/search/">
+    <form class="form form-search margin10h" method="get" action="/search/">
         <div class="row-fluid">
             <div class="input-append ">
                 <input type="text" value="" placeholder="" class="search-query span2 validate[required]" id="avnpc-form-searchform-q" name="q">        
@@ -56,5 +59,20 @@
     </form>
     </footer>
 </div>
+		<!--[if lt IE 9]>
+        <script type="text/javascript" src="<?=$this->url->getStatic('/vendor/jquery-1.11.1/dist/jquery.js');?>"></script>
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+        <script type="text/javascript" src="<?=$this->url->getStatic('/vendor/jquery/dist/jquery.js');?>"></script>
+        <!--<![endif]-->
+<?
+$this->assets
+->collection('footerJs')
+->addJs('/vendor/moment/min/moment-with-locales.js')
+->addJs('/avnpc/js/core.js')
+->addJs('/avnpc/js/init.js')
+;
+$this->assets->outputJs('footerJs');
+?>
 </body>
 </html>

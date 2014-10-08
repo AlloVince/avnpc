@@ -3,29 +3,29 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         less: {
-            wscn: {
+            avnpc: {
                 options: {
                     strictMath: true,
                     sourceMap: true,
                     outputSourceFiles: true,
                     //写在 css 文件中的 相对 路径
                     sourceMapURL: 'style.css.map',
-                    sourceMapFilename: 'public/static/wscn/css/style.css.map'
+                    sourceMapFilename: 'public/static/avnpc/css/style.css.map'
                 },
                 files: {
-                    'public/static/wscn/css/style.css': 'public/static/wscn/less/style.less'
+                    'public/static/avnpc/css/style.css': 'public/static/avnpc/less/style.less'
                 }
             }
         },
 
         watch: {
             less: {
-                files: 'public/static/wscn/less/*.less',
+                files: 'public/static/avnpc/less/*.less',
                 tasks: ['less']
             },
             livereload: {
                 options: { livereload: true },
-                files: ['public/static/wscn/js/**/*.js','public/static/wscn/css/**/*']
+                files: ['public/static/avnpc/js/**/*.js','public/static/avnpc/css/**/*']
             }
         }
     });

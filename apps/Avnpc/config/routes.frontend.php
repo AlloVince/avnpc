@@ -14,6 +14,12 @@ return array(
         'id' => 1,
         '_dispatch_cache' => 'lifetime=900&methods=get'
     ),
+    '/p/(\d+)' => array(
+        'module' => 'Avnpc',
+        'controller' => 'pages',
+        'id' => 1,
+        'action' => 'p',
+    ),
     '/pages/([\w-_]+)' => array(
         'module' => 'Avnpc',
         'controller' => 'pages',

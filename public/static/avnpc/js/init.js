@@ -245,4 +245,4 @@ eva.story = function(){
 	]), startStory);
 };
 
-eva.init(eva_config);
+//eva.init(eva_config);
